@@ -6,16 +6,16 @@ import '../cubit/add_notes_cubit/add_notes_cubit.dart';
 import 'custom_button.dart';
 import 'custom_text_field.dart';
 
-class NoteForm extends StatefulWidget {
-  const NoteForm({
+class AddNoteForm extends StatefulWidget {
+  const AddNoteForm({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<NoteForm> createState() => _NoteFormState();
+  State<AddNoteForm> createState() => _AddNoteFormState();
 }
 
-class _NoteFormState extends State<NoteForm> {
+class _AddNoteFormState extends State<AddNoteForm> {
   String? title, subTitle;
   final GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
@@ -27,9 +27,6 @@ class _NoteFormState extends State<NoteForm> {
       autovalidateMode: autovalidateMode,
       child: Column(
         children: [
-          const SizedBox(
-            height: 16,
-          ),
           CustomTextFormFiled(
             hintText: 'Title',
             onSaved: (value) {
@@ -66,9 +63,6 @@ class _NoteFormState extends State<NoteForm> {
                 },
               );
             },
-          ),
-          const SizedBox(
-            height: 8,
           ),
         ],
       ),
