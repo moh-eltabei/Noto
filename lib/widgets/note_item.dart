@@ -21,7 +21,7 @@ class NoteItem extends StatelessWidget {
         ),
         margin: const EdgeInsets.only(bottom: 8),
         decoration: BoxDecoration(
-          color: Colors.amber[300],
+          color: Color(notes.color),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -60,8 +60,8 @@ class NoteItem extends StatelessWidget {
               child: Text(
                 notes.date,
                 style: TextStyle(
-                  color: Colors.black.withOpacity(.5),
-                  fontSize: 14,
+                  color: Colors.black,
+                  fontSize: 18,
                 ),
               ),
             ),
