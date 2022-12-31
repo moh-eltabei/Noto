@@ -4,6 +4,7 @@ import 'package:noto/model/note_model.dart';
 import 'package:intl/intl.dart';
 
 import '../cubit/add_notes_cubit/add_notes_cubit.dart';
+import 'colors_list_view.dart';
 import 'custom_button.dart';
 import 'custom_text_field.dart';
 
@@ -44,6 +45,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subTitle = value;
             },
           ),
+          const ColorListView(),
           BlocBuilder<AddNotesCubit, AddNotesState>(
             builder: (context, state) {
               return CustomButton(
@@ -60,7 +62,6 @@ class _AddNoteFormState extends State<AddNoteForm> {
                         date: formattedDate,
                         color: Colors.blue.withOpacity(.8).value);
                     BlocProvider.of<AddNotesCubit>(context).addNote(noteModel);
-                    print('note added');
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
