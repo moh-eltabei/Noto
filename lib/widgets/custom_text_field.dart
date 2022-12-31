@@ -4,15 +4,24 @@ import '../const.dart';
 
 class CustomTextFormFiled extends StatelessWidget {
   const CustomTextFormFiled(
-      {super.key, required this.hintText, this.maxLines = 1, this.onSaved});
+      {super.key,
+      required this.hintText,
+      this.maxLines = 1,
+      this.onSaved,
+      this.onChanged,
+      this.initialValue});
 
   final String hintText;
   final int maxLines;
+  final String? initialValue;
   final void Function(String?)? onSaved;
+  final void Function(String?)? onChanged;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: initialValue,
       onSaved: onSaved,
+      onChanged: onChanged,
       maxLines: maxLines,
       cursorColor: kPrimaryColor,
       validator: ((value) {
@@ -26,7 +35,8 @@ class CustomTextFormFiled extends StatelessWidget {
         alignLabelWithHint: true,
         hintText: hintText,
         labelText: hintText,
-        labelStyle: const TextStyle(color: kPrimaryColor),
+        hintStyle: const TextStyle(color: Colors.grey),
+        // labelStyle: const TextStyle(color: kPrimaryColor),
         border: customBorder(kPrimaryColor),
         enabledBorder: customBorder(),
         focusedBorder: customBorder(kPrimaryColor),

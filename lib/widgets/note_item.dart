@@ -11,8 +11,14 @@ class NoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).pushNamed(
-        EditNotePage.id,
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: ((context) {
+            return EditNotePage(
+              note: note,
+            );
+          }),
+        ),
       ),
       child: Container(
         padding: const EdgeInsets.only(
@@ -31,6 +37,8 @@ class NoteItem extends StatelessWidget {
             ListTile(
               title: Text(
                 note.title,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   color: Colors.black,
                   fontSize: 28,
@@ -42,6 +50,8 @@ class NoteItem extends StatelessWidget {
                 ),
                 child: Text(
                   note.subTitle,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: Colors.black.withOpacity(.5),
                     fontSize: 18,

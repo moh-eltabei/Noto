@@ -24,12 +24,9 @@ class NotoApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => NotesListCubit(),
       child: MaterialApp(
-        routes: {
-          NotesPage.id: (context) => const NotesPage(),
-          EditNotePage.id: (context) => const EditNotePage(),
-        },
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          primaryColor: kPrimaryColor,
           brightness: Brightness.dark,
           fontFamily: 'Poppins',
         ),

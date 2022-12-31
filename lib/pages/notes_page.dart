@@ -9,7 +9,6 @@ import '../widgets/notes_list_view.dart';
 
 class NotesPage extends StatelessWidget {
   const NotesPage({super.key});
-  static String id = 'NotesPage';
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +37,13 @@ class NotesPage extends StatelessWidget {
         ),
       ),
       widget: Column(
-        children: const [
+        children: [
           CustomAppBar(
             title: 'Notes',
             icon: Icons.search,
+            onPressed: () {},
           ),
-          Expanded(
+          const Expanded(
             child: NotesListView(),
           ),
         ],
