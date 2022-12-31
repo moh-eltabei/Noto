@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noto/const.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key, required this.title, required this.icon, required this.onPressed});
@@ -24,7 +25,7 @@ class CustomAppBar extends StatelessWidget {
             height: 45,
             width: 45,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(.08),
+              color: kWhitColore.withOpacity(.08),
               borderRadius: BorderRadius.circular(
                 16,
               ),

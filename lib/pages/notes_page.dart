@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:noto/cubit/notes_list_cubit/notes_list_cubit.dart';
 import 'package:noto/widgets/custom_app_body.dart';
 
+import '../const.dart';
 import '../widgets/app_bar.dart';
 import 'add_new_note.dart';
 import '../widgets/notes_list_view.dart';
@@ -14,6 +15,7 @@ class NotesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomAppBody(
       floatingActionButton: FloatingActionButton(
+        backgroundColor: kPrimaryColor,
         onPressed: () {
           showModalBottomSheet(
               isScrollControlled: true,

@@ -26,7 +26,6 @@ class NotoApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: kPrimaryColor,
           brightness: Brightness.dark,
           fontFamily: 'Poppins',
         ),

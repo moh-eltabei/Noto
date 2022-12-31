@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:noto/const.dart';
 import 'package:noto/cubit/notes_list_cubit/notes_list_cubit.dart';
 import 'package:noto/pages/edit_note_page.dart';
 import '../model/note_model.dart';
@@ -40,7 +41,7 @@ class NoteItem extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
-                  color: Colors.black,
+                  color: kBlackColor,
                   fontSize: 28,
                 ),
               ),
@@ -53,7 +54,7 @@ class NoteItem extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: Colors.black.withOpacity(.5),
+                    color: kBlackColor.withOpacity(.5),
                     fontSize: 18,
                   ),
                 ),
@@ -65,7 +66,7 @@ class NoteItem extends StatelessWidget {
                 },
                 icon: const Icon(
                   Icons.delete,
-                  color: Colors.black,
+                  color: kBlackColor,
                   size: 34,
                 ),
               ),
@@ -77,7 +78,7 @@ class NoteItem extends StatelessWidget {
               child: Text(
                 note.date,
                 style: const TextStyle(
-                  color: Colors.black,
+                  color: kBlackColor,
                   fontSize: 14,
                 ),
               ),

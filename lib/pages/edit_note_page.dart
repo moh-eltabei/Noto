@@ -6,6 +6,7 @@ import 'package:noto/model/note_model.dart';
 import '../widgets/app_bar.dart';
 import '../widgets/custom_app_body.dart';
 import '../widgets/custom_text_field.dart';
+import '../widgets/edit_note_color.dart';
 
 class EditNotePage extends StatefulWidget {
   const EditNotePage({super.key, required this.note});
@@ -41,14 +42,14 @@ class _EditNotePageState extends State<EditNotePage> {
             initialValue: widget.note.title,
             hintText: 'Title',
           ),
-          const SizedBox(
-            height: 16,
+          EditNoteColor(
+            note: widget.note,
           ),
           Expanded(
             child: CustomTextFormFiled(
               hintText: 'Content',
               initialValue: widget.note.subTitle,
-              maxLines: 20,
+              maxLines: 40,
               onChanged: (value) {
                 subTitle = value;
               },

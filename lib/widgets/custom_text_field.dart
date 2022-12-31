@@ -35,9 +35,7 @@ class CustomTextFormFiled extends StatelessWidget {
         alignLabelWithHint: true,
         hintText: hintText,
         labelText: hintText,
-        hintStyle: const TextStyle(color: Colors.grey),
-        // labelStyle: const TextStyle(color: kPrimaryColor),
-        border: customBorder(kPrimaryColor),
+        border: customBorder(),
         enabledBorder: customBorder(),
         focusedBorder: customBorder(kPrimaryColor),
       ),
@@ -50,7 +48,7 @@ class CustomTextFormFiled extends StatelessWidget {
         8,
       ),
       borderSide: BorderSide(
-        color: color ?? Colors.white,
+        color: color ?? kWhitColore,
       ),
     );
   }

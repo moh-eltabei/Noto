@@ -31,13 +31,13 @@ class CustomButton extends StatelessWidget {
                 height: 24,
                 width: 24,
                 child: CircularProgressIndicator(
-                  color: Colors.black,
+                  color: kBlackColor,
                 ),
               )
             : const Text(
                 'Add',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: kBlackColor,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -59,13 +59,13 @@ class CustomButton extends StatelessWidget {
     //               height: 24,
     //               width: 24,
     //               child: CircularProgressIndicator(
-    //                 color: Colors.black,
+    //                 color: kBlackColor,
     //               ),
     //             )
     //           : const Text(
     //               'Add',
     //               style: TextStyle(
-    //                 color: Colors.black,
+    //                 color:kBlackColor,
     //                 fontSize: 20,
     //               ),
     //             ),
