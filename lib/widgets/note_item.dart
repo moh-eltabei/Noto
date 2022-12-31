@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:noto/cubit/notes_list_cubit/notes_list_cubit.dart';
 import 'package:noto/pages/edit_note_page.dart';
-
 import '../model/note_model.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key, required this.notes});
-  final NoteModel notes;
+  const NoteItem({super.key, required this.note});
+  final NoteModel note;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class NoteItem extends StatelessWidget {
         ),
         margin: const EdgeInsets.only(bottom: 8),
         decoration: BoxDecoration(
-          color: Color(notes.color),
+          color: Color(note.color),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -29,7 +30,7 @@ class NoteItem extends StatelessWidget {
           children: [
             ListTile(
               title: Text(
-                notes.title,
+                note.title,
                 style: const TextStyle(
                   color: Colors.black,
                   fontSize: 28,
@@ -40,17 +41,23 @@ class NoteItem extends StatelessWidget {
                   vertical: 16,
                 ),
                 child: Text(
-                  notes.subTitle,
+                  note.subTitle,
                   style: TextStyle(
                     color: Colors.black.withOpacity(.5),
                     fontSize: 18,
                   ),
                 ),
               ),
-              trailing: const Icon(
-                Icons.delete,
-                color: Colors.black,
-                size: 34,
+              trailing: IconButton(
+                onPressed: () {
+                  note.delete();
+                  BlocProvider.of<NotesListCubit>(context).fitchAllNotes();
+                },
+                icon: const Icon(
+                  Icons.delete,
+                  color: Colors.black,
+                  size: 34,
+                ),
               ),
             ),
             Padding(
@@ -58,10 +65,10 @@ class NoteItem extends StatelessWidget {
                 right: 16,
               ),
               child: Text(
-                notes.date,
-                style: TextStyle(
+                note.date,
+                style: const TextStyle(
                   color: Colors.black,
-                  fontSize: 18,
+                  fontSize: 14,
                 ),
               ),
             ),

@@ -21,17 +21,20 @@ class NotoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      routes: {
-        NotesPage.id: (context) => const NotesPage(),
-        EditNotePage.id: (context) => const EditNotePage(),
-      },
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        fontFamily: 'Poppins',
+    return BlocProvider(
+      create: (context) => NotesListCubit(),
+      child: MaterialApp(
+        routes: {
+          NotesPage.id: (context) => const NotesPage(),
+          EditNotePage.id: (context) => const EditNotePage(),
+        },
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          fontFamily: 'Poppins',
+        ),
+        home: const NotesPage(),
       ),
-      home: const NotesPage(),
     );
   }
 }

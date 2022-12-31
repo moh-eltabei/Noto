@@ -12,11 +12,12 @@ class NotesListView extends StatefulWidget {
 }
 
 class _NotesListViewState extends State<NotesListView> {
-   @override
-     void initState() {
+  @override
+  void initState() {
     BlocProvider.of<NotesListCubit>(context).fitchAllNotes();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<NotesListCubit, NotesListState>(
@@ -27,7 +28,7 @@ class _NotesListViewState extends State<NotesListView> {
           padding: EdgeInsets.zero,
           itemBuilder: ((context, index) {
             return NoteItem(
-              notes: notes[index],
+              note: notes[index],
             );
           }),
           itemCount: notes.length,
