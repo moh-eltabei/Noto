@@ -6,7 +6,6 @@ import 'package:noto/cubit/notes_list_cubit/notes_list_cubit.dart';
 import 'package:noto/model/note_model.dart';
 import 'package:noto/pages/notes_page.dart';
 import 'package:noto/simple_bloc_observer.dart';
-import 'pages/edit_note_page.dart';
 
 void main() async {
   await Hive.initFlutter();
