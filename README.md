@@ -1,12 +1,26 @@
-# noto
+<p align="center">
+  <img width="128" align="center" src="assets/imgs/app_icon.gif">
+</p>
+<h1 align="center">
+  Noto
+</h1>
+<p align="center">
+  A modern, dark, lightweight text editor with a minimalist design.
+</p>
 
-A new Flutter project.
+## Tools
+<b>Flutter || Dart || Local database<br /></b>
+<b>State Management:</b> Cubit <br />
+<b>Local database:</b> Hive Package
+<b>Packages:</b> flutter_bloc, hive, hive_flutter, intl, modal_progress_hud_nsn, build_runner, hive_generator.<br />
+<b>Fonts:</b> Poppins.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+<img src="assets/imgs/screenshots/home.png" height="500" />&emsp; &emsp; &emsp; &emsp;<img src="assets/imgs/screenshots/add1.png" height="500" />&emsp; &emsp; &emsp; &emsp;<img src="assets/imgs/screenshots/add2.png" height="500" /></br><img src="assets/imgs/screenshots/edit1.png" height="500" />&emsp; &emsp; &emsp; &emsp;<img src="assets/imgs/screenshots/edit2.png" height="500" />&emsp; &emsp; &emsp; &emsp;<img src="assets/imgs/screenshots/edit3.png" height="500" />
 
-A few resources to get you started if this is your first Flutter project:
+## Finally
+A few resources to get you started your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
