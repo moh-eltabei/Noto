@@ -11,7 +11,7 @@
 ## Tools
 <b>Flutter || Dart || Local database<br /></b>
 <b>State Management:</b> Cubit <br />
-<b>Local database:</b> Hive Package
+<b>Local database:</b> Hive Package <br />
 <b>Packages:</b> flutter_bloc, hive, hive_flutter, intl, modal_progress_hud_nsn, build_runner, hive_generator.<br />
 <b>Fonts:</b> Poppins.
 
