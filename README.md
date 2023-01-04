@@ -5,7 +5,7 @@
   Noto
 </h1>
 <p align="center">
-  A modern, dark, lightweight text editor with a minimalist design.
+  A modern, dark, lightweight Notes Application with a minimalist design.
 </p>
 
 ## Tools
